@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+li, a, button{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: whitesmoke;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #0e303d;
+}
+.logo{
+    cursor: pointer;
+}
+.nav_links{
+    list-style: none ;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    color:aqua;
+}
+button{
+    padding: 10px 25px;
+    background-color:rgb(230, 114, 6);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+button:hover{
+    background-color: rgba(0,136,156,.5);
+}
+
+
+
+/*------------main--------------*/
+
+
+main > .intro{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px 5%;
+    background-color: #0e303d
+}
+main > .intro > .col1{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+}
+main > .intro > .col1 > h2{
+    font-size: 50px;
+    color: whitesmoke;
+}
+main > .intro > .col1 > p{
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+main > .categories {
+    margin: 80px 5%;
+    display: flex;
+    gap:20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+main > .categories > .card{
+    width: 250px;
+    height: 400px;
+    box-sizing: border-box;
+    display: flex;
+    cursor: pointer;
+    color: pink;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    border-radius: 15px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+main > .categories > .card:hover{
+    opacity: 0.875;
+}
+main > .categories > .card > svg{
+    width: 70px;
+    fill: palevioletred;
+}
+main > .categories > .card > p{
+    font-size: 15px;
+    margin: 0 5%;
+    text-align: center;
+}
+
+
+/*----------About Categories-----------*/
+
+main > .aboutsections {
+    margin: 10px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+
+    .card{
+        background-color: none;
+        display: flex;
+        width: 100%;
+        
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1.5em;
+
+        > .cols{
+            background-color: none;
+            width: 550px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            
+            gap: 0.5em;
+
+            >img{
+                border-bottom-left-radius: 10px;
+                border-top-left-radius: 10px;
+                width: 100%;
+            }
+            > p{
+                text-align: justify;
+            }
+            > h3{
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #0e303d;
+}
+footer > .footer_cols{
+    margin: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+    width: 200%;
+}
+
+.categoriesheader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 60px 0;
+    position: relative;
+    text-align: center;
+
+    > .cat-head{
+        font-size: 40px;
+        font-weight: 501;
+    }
+    
+    > .underline{
+        display: flex;
+        margin: 4px;
+        width: 80px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: rgb(230, 114, 6);
+    }
+}
+
+
+footer > .footer_cols > .footer_col1{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 200%;
+
+    > h4{
+        color: white;
+        font-size: 20px;
+    }
+
+    > .foot > li{
+        list-style: none;
+    }
+    > .foot > li > a > svg{
+        width: 45px;
+        
+    }
+
+}
+.logoicon{
+    display: none;
+}
+.logofull{
+    display: block;
+}
+
+
+@media screen and (max-width:568px){
+    main > .intro > .col2 {
+        display: none;
+    }
+    .logoicon{
+        display: block;
+    }
+    .logofull{
+        display: none;
+    }
+}
+@media screen and (max-width:1000px){
+    main > .intro{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
